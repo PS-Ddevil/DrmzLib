@@ -1,0 +1,48 @@
+
+if(!strcmp($lang,"English")){
+    if(!strcmp($genre,"Fiction")){
+        $sql = "SELECT book_name FROM ".$datatable." WHERE language = 'English' and genre = 'Fiction'";
+        if ($result=mysqli_query($conn,$sql))
+          {
+          // Return the number of rows in result set
+          $rowcount=mysqli_num_rows($result);
+          $GLOBALS['book_id'] = "EF".$rowcount;
+          // Free result set
+          mysqli_free_result($result);
+          }
+    }else{
+        $sql = "SELECT book_name FROM ".$datatable." WHERE language = 'English' and genre = 'Non Fiction'";
+        if ($result=mysqli_query($conn,$sql))
+          {
+          // Return the number of rows in result set
+          $rowcount=mysqli_num_rows($result);
+          $GLOBALS['book_id'] = "ENF".$rowcount;
+          // Free result set
+          mysqli_free_result($result);
+          }
+    }
+}
+
+if(!strcmp($lang,"Hindi")){
+    if(!strcmp($genre,"Fiction")){
+        $sql = "SELECT book_name FROM ".$datatable." WHERE language = 'Hindi' and genre = 'Fiction'";
+       if ($result=mysqli_query($conn,$sql))
+          {
+          // Return the number of rows in result set
+          $rowcount=mysqli_num_rows($result);
+          $GLOBALS['book_id'] = "HF".$rowcount;
+          // Free result set
+          mysqli_free_result($result);
+          }
+    }else{
+        $sql = "SELECT book_name FROM ".$datatable." WHERE language = 'Hindi' and genre = 'Fiction'";
+        if ($result=mysqli_query($conn,$sql))
+          {
+          // Return the number of rows in result set
+          $rowcount=mysqli_num_rows($result);
+          $GLOBALS['book_id'] = "HNF".$rowcount;
+          // Free result set
+          mysqli_free_result($result);
+          }
+    }
+}

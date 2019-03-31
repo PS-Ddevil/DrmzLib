@@ -1,0 +1,56 @@
+<html>
+<head>
+<link rel="icon" href="/img/Itzikgur-My-Seven-Books-2.ico" type="tmage/x-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<title>SinhaLib| Beyond the World of Letters</title>
+<style>
+    #form{
+        background-color: rgba(255,255,255,0.5);
+    }
+    .txt{
+        float: left;
+        margin-left: 40px;
+        font-size: 20px;
+    }
+    .box{
+        margin-bottom: 20px;
+        margin-left: 40px;
+        height: 30px;
+        width: 90%;
+    }
+    #sum{
+        height: 100px;
+    }
+</style>
+</head>
+<body style="background-image: url(img/pexels-photo-1290141.jpeg); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover">
+<div class="container">
+    <form action="insert.php" method="post" id="form" enctype="multipart/form-data">
+    <center style="margin-top: 1%; padding-top: 20px; padding-bottom: 40px; font-size: 25px"><span>Book Fill-in Form</span></center>
+    <span class="txt">ISBN</span>
+    <input class="box" id="book_id" type="text" placeholder="Type ISBN Number" name="book_id" required/>
+    <br>
+    <span class="txt">Book Name</span>
+    <input class="box" id="book" type="text" placeholder="Type Book Name" name="book" required/>
+    <br>
+    <span class="txt">Author ID</span>
+    <input class="box" id="author" type="text" placeholder="Type Author ID" name="author" required/>
+    <br>
+    <span class="txt">Genre</span>
+    <select class="box" id="genre" name="genre"/>
+        <option value="Fiction">Fiction</option>
+        <option value="Non Fiction">Non Fiction</option>
+    </select><br>
+    <span class="txt">Language</span>
+    <input class="box" id="lang" type="text" placeholder="Language" name="lang" required/>
+    <br>
+    <span class="txt">Image</span>
+    <input class="box" id="image" name="image" type="file" required/><br>
+    <span class="txt">Description</span>
+    <textarea id="sum" class="box" name="sum" placeholder="Give some Description"></textarea>
+    <br>
+    <center><input type="submit"></center>
+</form>
+</div>
+</body>
+</html>
